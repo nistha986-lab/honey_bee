@@ -1,0 +1,46 @@
+<html>
+
+<head>
+
+<link rel="stylesheet"
+href="{{url_for('static',filename='style.css')}}">
+
+</head>
+
+<body>
+
+<div class="checkout">
+
+<h1>Checkout 🐝</h1>
+
+<form
+action="/success"
+method="POST">
+
+<input
+name="location"
+placeholder="Your Location"
+required>
+
+<input
+name="phone"
+placeholder="Phone Number"
+required>
+
+<input
+name="extra"
+placeholder="Additional Number">
+
+<button>
+
+Place Order
+
+</button>
+
+</form>
+
+</div>
+
+</body>
+
+</html>

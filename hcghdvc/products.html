@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<link
+rel="stylesheet"
+href="{{ url_for('static',filename='style.css') }}">
+
+</head>
+
+<body>
+
+<h1>
+🌸 Honey Bee Summer Collection 🌸
+</h1>
+
+<h2>
+Choose Your Favorite Products
+</h2>
+
+<form
+action="/checkout"
+method="POST">
+
+<div class="grid">
+
+{% for item in products %}
+
+<div class="card">
+
+<img
+src="{{ item.image }}"
+alt="product">
+
+<h3>
+
+{{ item.name }}
+
+</h3>
+
+<p>
+
+{{ item.desc }}
+
+</p>
+
+<h2>
+
+{{ item.price }}
+
+</h2>
+
+<label>
+
+<input
+type="checkbox"
+name="product"
+value="{{ item.name }}">
+
+Select Product
+
+</label>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+
+<div class="buy">
+
+<button type="submit">
+
+🛍 BUY NOW
+
+</button>
+
+</div>
+
+</form>
+
+</body>
+
+</html>
